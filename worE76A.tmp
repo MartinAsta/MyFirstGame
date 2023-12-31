@@ -1,0 +1,365 @@
+[gd_scene load_steps=10 format=3 uid="uid://b3u10akqhb8j0"]
+
+[ext_resource type="PackedScene" uid="uid://jd7b5826ra0r" path="res://block_ground.tscn" id="2_fvmj3"]
+[ext_resource type="PackedScene" uid="uid://rf8kcew4udrd" path="res://block_edge_left.tscn" id="2_iqk82"]
+[ext_resource type="PackedScene" uid="uid://t5fatee4pyco" path="res://block_ground2.tscn" id="3_771hw"]
+[ext_resource type="PackedScene" uid="uid://b54bum2uv8yej" path="res://block_upward_transition.tscn" id="4_aw6e2"]
+[ext_resource type="PackedScene" uid="uid://bhxb8gbu8bh0i" path="res://player.tscn" id="6_yt8ka"]
+[ext_resource type="PackedScene" uid="uid://dfv3fevkoybsd" path="res://background.tscn" id="8_5abi8"]
+[ext_resource type="PackedScene" uid="uid://b1nqm64mb173i" path="res://block_flat.tscn" id="9_350ts"]
+[ext_resource type="PackedScene" uid="uid://ss8crj8vn38k" path="res://block_left.tscn" id="9_m0sxm"]
+[ext_resource type="PackedScene" uid="uid://d1k1yn2owsakj" path="res://block_plateform.tscn" id="10_sa5gk"]
+
+[node name="World" type="Node2D"]
+position = Vector2(-152, -8)
+
+[node name="BlockUp" parent="." instance=ExtResource("2_iqk82")]
+position = Vector2(264, 152)
+
+[node name="BlockGround" parent="." instance=ExtResource("2_fvmj3")]
+position = Vector2(248, 184)
+
+[node name="BlockUp2" parent="." instance=ExtResource("3_771hw")]
+position = Vector2(232, 184)
+
+[node name="BlockUp3" parent="." instance=ExtResource("4_aw6e2")]
+position = Vector2(264, 184)
+
+[node name="BlockGround2" parent="." instance=ExtResource("2_fvmj3")]
+position = Vector2(216, 184)
+
+[node name="BlockUp4" parent="." instance=ExtResource("4_aw6e2")]
+position = Vector2(312, 152)
+
+[node name="BlockUp5" parent="." instance=ExtResource("2_iqk82")]
+position = Vector2(312, 104)
+
+[node name="Background" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(216, 168)
+
+[node name="Background2" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(312, 88)
+
+[node name="Background16" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(264, 120)
+
+[node name="Background3" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(248, 168)
+
+[node name="Background4" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(232, 152)
+
+[node name="Background5" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(200, 152)
+
+[node name="Background9" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(216, 152)
+
+[node name="Background10" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(248, 152)
+
+[node name="Background11" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(232, 136)
+
+[node name="Background12" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(200, 136)
+
+[node name="Background13" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(216, 136)
+
+[node name="Background14" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(248, 136)
+
+[node name="Background6" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(200, 168)
+
+[node name="Background7" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(280, 136)
+
+[node name="Background8" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(264, 136)
+
+[node name="Background17" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(184, 136)
+
+[node name="Background18" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(168, 136)
+
+[node name="Background19" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(136, 152)
+
+[node name="Background20" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(104, 152)
+
+[node name="Background21" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(120, 152)
+
+[node name="Background22" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(152, 152)
+
+[node name="Background23" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(136, 136)
+
+[node name="Background24" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(104, 136)
+
+[node name="Background25" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(120, 136)
+
+[node name="Background26" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(152, 136)
+
+[node name="Background27" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(184, 152)
+
+[node name="Background28" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(168, 152)
+
+[node name="Background29" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(88, 136)
+
+[node name="Background30" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(344, 168)
+
+[node name="Background31" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(312, 184)
+
+[node name="Background32" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(280, 184)
+
+[node name="Background33" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(296, 184)
+
+[node name="Background34" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(328, 184)
+
+[node name="Background35" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(312, 168)
+
+[node name="Background36" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(280, 168)
+
+[node name="Background37" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(296, 168)
+
+[node name="Background38" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(328, 168)
+
+[node name="Background39" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(88, 152)
+
+[node name="Background40" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(344, 184)
+
+[node name="Background66" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(424, 168)
+
+[node name="Background67" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(392, 184)
+
+[node name="Background68" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(360, 184)
+
+[node name="Background69" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(376, 184)
+
+[node name="Background70" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(408, 184)
+
+[node name="Background71" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(392, 168)
+
+[node name="Background72" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(360, 168)
+
+[node name="Background73" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(376, 168)
+
+[node name="Background74" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(408, 168)
+
+[node name="Background75" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(424, 184)
+
+[node name="Background86" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(424, 136)
+
+[node name="Background87" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(408, 152)
+
+[node name="Background88" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(408, 136)
+
+[node name="Background89" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(424, 152)
+
+[node name="Background76" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(392, 136)
+
+[node name="Background77" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(360, 152)
+
+[node name="Background78" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(328, 152)
+
+[node name="Background79" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(344, 152)
+
+[node name="Background80" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(376, 152)
+
+[node name="Background81" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(360, 136)
+
+[node name="Background82" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(328, 136)
+
+[node name="Background83" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(344, 136)
+
+[node name="Background84" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(376, 136)
+
+[node name="Background90" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(424, 120)
+
+[node name="Background91" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(408, 120)
+
+[node name="Background92" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(392, 120)
+
+[node name="Background93" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(360, 120)
+
+[node name="Background94" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(328, 120)
+
+[node name="Background95" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(344, 120)
+
+[node name="Background96" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(376, 120)
+
+[node name="Background85" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(392, 152)
+
+[node name="Background41" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(88, 168)
+
+[node name="Background42" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(72, 168)
+
+[node name="Background43" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(40, 184)
+
+[node name="Background44" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(8, 184)
+
+[node name="Background45" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(24, 184)
+
+[node name="Background46" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(56, 184)
+
+[node name="Background47" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(40, 168)
+
+[node name="Background48" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(8, 168)
+
+[node name="Background49" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(24, 168)
+
+[node name="Background50" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(56, 168)
+
+[node name="Background51" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(88, 184)
+
+[node name="Background52" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(72, 184)
+
+[node name="Background53" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(184, 168)
+
+[node name="Background54" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(168, 168)
+
+[node name="Background55" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(136, 184)
+
+[node name="Background56" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(104, 184)
+
+[node name="Background57" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(120, 184)
+
+[node name="Background58" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(152, 184)
+
+[node name="Background59" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(136, 168)
+
+[node name="Background60" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(104, 168)
+
+[node name="Background61" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(120, 168)
+
+[node name="Background62" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(152, 168)
+
+[node name="Background63" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(184, 184)
+
+[node name="Background64" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(168, 184)
+
+[node name="BlockUp6" parent="." instance=ExtResource("3_771hw")]
+position = Vector2(200, 184)
+
+[node name="BlockUp7" parent="." instance=ExtResource("2_iqk82")]
+position = Vector2(184, 184)
+
+[node name="Block" parent="." instance=ExtResource("9_350ts")]
+position = Vector2(280, 152)
+
+[node name="Block6" parent="." instance=ExtResource("9_350ts")]
+position = Vector2(296, 152)
+
+[node name="Block2" parent="." instance=ExtResource("9_350ts")]
+position = Vector2(328, 104)
+
+[node name="Block3" parent="." instance=ExtResource("9_350ts")]
+position = Vector2(376, 104)
+
+[node name="Block4" parent="." instance=ExtResource("9_350ts")]
+position = Vector2(360, 104)
+
+[node name="Block5" parent="." instance=ExtResource("9_350ts")]
+position = Vector2(344, 104)
+
+[node name="BlockUp8" parent="." instance=ExtResource("9_m0sxm")]
+position = Vector2(312, 136)
+
+[node name="BlockUp10" parent="." instance=ExtResource("9_m0sxm")]
+position = Vector2(312, 120)
+
+[node name="BlockUp9" parent="." instance=ExtResource("9_m0sxm")]
+position = Vector2(264, 168)
+
+[node name="Block7" parent="." instance=ExtResource("10_sa5gk")]
+position = Vector2(296, 136)
+
+[node name="Block9" parent="." instance=ExtResource("10_sa5gk")]
+position = Vector2(280, 120)
+
+[node name="Block8" parent="." instance=ExtResource("10_sa5gk")]
+position = Vector2(232, 168)
+
+[node name="Background65" parent="." instance=ExtResource("8_5abi8")]
+position = Vector2(296, 120)
+
+[node name="Player" parent="." instance=ExtResource("6_yt8ka")]
+position = Vector2(216, 165)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4vh0fm7p50qu"]
+
+[ext_resource type="Texture2D" uid="uid://cggu8qnl57p4q" path="res://tilemap.png" id="1_5a4qk"]
+[ext_resource type="PackedScene" uid="uid://dx5c6koiqbw64" path="res://hitbox.tscn" id="2_240tk"]
+
+[node name="DeathFall" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5a4qk")
+region_enabled = true
+region_rect = Rect2(17, 51, 16, 16)
+
+[node name="Hitbox" parent="." instance=ExtResource("2_240tk")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(1, 8, 1, 4, 3, 2, 4, 2, 4, 0, 3, -1, 1, -2, -1, -2, -3, -1, -4, 0, -4, 2, -3, 2, -1, 4, -1, 8)

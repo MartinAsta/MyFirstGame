@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhxb8gbu8bh0i"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_g2xsw"]
+[ext_resource type="Texture2D" uid="uid://cggu8qnl57p4q" path="res://tilemap.png" id="1_ix513"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjkad"]
+atlas = ExtResource("1_ix513")
+region = Rect2(17, 85, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njnke"]
+atlas = ExtResource("1_ix513")
+region = Rect2(34, 85, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6e6np"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjkad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njnke")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lvs4"]
+size = Vector2(6, 10)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 2
+collision_layer = 2
+script = ExtResource("1_g2xsw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6e6np")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.715654
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_4lvs4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -100
+limit_bottom = 250
+limit_smoothed = true
+
+[node name="LadderCheckLeft" type="RayCast2D" parent="."]
+position = Vector2(-3, 10)
+target_position = Vector2(0, -16)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="LadderCheckRight" type="RayCast2D" parent="."]
+position = Vector2(3, -6)
+target_position = Vector2(0, 16)
+collide_with_areas = true
+collide_with_bodies = false
