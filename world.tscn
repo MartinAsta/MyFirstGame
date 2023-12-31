@@ -27,7 +27,7 @@ position = Vector2(736, -8)
 position = Vector2(512, 120)
 
 [node name="Player" parent="." instance=ExtResource("6_yt8ka")]
-position = Vector2(800, -6)
+position = Vector2(160, 176)
 disable_mode = 1
 
 [node name="Ladder" parent="." instance=ExtResource("5_f6hia")]

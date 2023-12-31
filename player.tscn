@@ -47,6 +47,8 @@ shape = SubResource("RectangleShape2D_4lvs4")
 limit_left = -100
 limit_bottom = 250
 limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="LadderCheckLeft" type="RayCast2D" parent="."]
 position = Vector2(-3, 10)

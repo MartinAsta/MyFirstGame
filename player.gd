@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 100.0
+const SPEED = 85.0
 const JUMP_HEIGHT = -140.0
 var max_jump = 1
 var remaining_jump = 1
