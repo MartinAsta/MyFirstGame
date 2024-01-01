@@ -9,22 +9,18 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 enum { MOVE, CLIMB }
 var state = MOVE
 var buffered_jump = false
+var coyote_jump = false
 
 @onready var ladderCheckLeft = $LadderCheckLeft
 @onready var ladderCheckRight = $LadderCheckRight
 @onready var sprite = $AnimatedSprite2D
 @onready var jumpBufferTimer = $JumpBufferTimer
+@onready var coyoteTimer = $CoyoteTimer
 
 func _physics_process(delta):
-	var x_input = Input.get_axis("ui_left", "ui_right")
-	var y_input = Input.get_axis("ui_up", "ui_down")
-	
 	match state:
 		MOVE: move_state(delta)
-		CLIMB: climb_state(y_input)
-	
-	move_left_or_right(x_input)
-	move_and_slide()
+		CLIMB: climb_state()
 
 func hit_flower():
 	max_jump += 1
@@ -48,23 +44,27 @@ func move_left_or_right(direction):
 
 func apply_gravity(delta):
 	if not is_on_floor():
-		velocity.y += (gravity * delta)/3
+		velocity.y += (gravity * delta)/2.5
 		if remaining_jump == 0 and velocity.y > 0:
 			velocity.y += 2
 	else:
 		remaining_jump = max_jump
 
 func move_state(delta):
+	var x_input = Input.get_axis("ui_left", "ui_right")
+	move_left_or_right(x_input)
+	
 	if is_on_ladder() and Input.is_action_just_pressed("ui_up"):
 		state = CLIMB
 	apply_gravity(delta)
 	if Input.is_action_just_pressed("ui_up") or buffered_jump:
-		if is_on_floor():
+		if is_on_floor() or coyote_jump:
 			jump()
 			buffered_jump = false
+			coyote_jump = false
 		elif remaining_jump > 0:
 			jump()
-		else:
+		elif not buffered_jump:
 			buffered_jump = true
 			jumpBufferTimer.start()
 
@@ -73,11 +73,26 @@ func move_state(delta):
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y += 15
 
-func climb_state(input):
+	var wasOnFloor = is_on_floor()
+	move_and_slide()
+	var justLeftGround = not is_on_floor() and wasOnFloor
+	if justLeftGround and velocity.y >= 0:
+		coyote_jump = true
+		coyoteTimer.start()
+
+func climb_state():
 	if not is_on_ladder():
 		state = MOVE
 		remaining_jump = max_jump
-	velocity.y = input*50
+	var x_input = Input.get_axis("ui_left", "ui_right")
+	var y_input = Input.get_axis("ui_up", "ui_down")
+	velocity.y = y_input*50
+	move_left_or_right(x_input)
+	
+	move_and_slide()
 
 func _on_jump_buffer_timer_timeout():
 	buffered_jump = false
+
+func _on_coyote_timer_timeout():
+	coyote_jump = false
